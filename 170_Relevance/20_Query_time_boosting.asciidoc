@@ -64,6 +64,6 @@ GET /docs_2014_*/_search <1>
 [TIP]
 ==================================================
 
-实际上，要想解读 <<explain,`explain`>> 的输出是相当复杂的，在 `explanation` 里面完全看不到 `boost` 值，也完全无法访问上面提到的 `t.getBoost()` 方法，权重值融合在 <<query-norm,`queryNorm`>> 中并应用到每个词。尽管说， `queryNorm` 对于每个词都是相同的，还是会发现一个权重提升过的词的 `queryNorm` 值要高于一个没有提升过的。
+实际上，要想解读 <<explain,`explain`>> 的输出是相当复杂的，在 `explanation` 里面完全看不到 `boost` 值，也完全无法访问上面提到的 `t.getBoost()` 方法，权重值融合在 <<query-norm,`lengthNorm`>> 中并应用到每个词。尽管说， `lengthNorm` 对于每个词都是相同的，还是会发现一个权重提升过的词的 `queryNorm` 值要高于一个没有提升过的。
 
 ==================================================
